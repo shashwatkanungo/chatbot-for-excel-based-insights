@@ -5,3 +5,4 @@ matplotlib
 seaborn
 plotly
 python-dotenv
+openpyxl
