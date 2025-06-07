@@ -27,7 +27,7 @@ if uploaded_file:
     st.subheader("Preview of Uploaded Data")
     st.dataframe(df.head())
 
-
+    # Show chat history
     if st.session_state.chat_history:
         st.subheader("Chat History")
         for i, chat in enumerate(st.session_state.chat_history):
@@ -58,7 +58,7 @@ if uploaded_file:
                 "fig": fig
             })
 
-
+            # Show latest result
             st.subheader("Latest Answer")
 
             if st.checkbox("Show Generated Code"):

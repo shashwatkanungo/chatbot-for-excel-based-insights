@@ -6,7 +6,7 @@ import traceback
 
 
 def execute_code(code: str, df: pd.DataFrame):
-
+    
     local_env = {'df': df, 'pd': pd, 'plt': plt}
     result = None
     fig = None
