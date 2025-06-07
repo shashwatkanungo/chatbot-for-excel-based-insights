@@ -6,17 +6,7 @@ import traceback
 
 
 def execute_code(code: str, df: pd.DataFrame):
-    """
-    Safely executes the given Python code with access to the `df` variable.
 
-    Parameters:
-    - code (str): Python code to execute
-    - df (pd.DataFrame): The DataFrame the code will work on
-
-    Returns:
-    - result: The value of the final expression or output
-    - fig: Matplotlib figure if any was created, else None
-    """
     local_env = {'df': df, 'pd': pd, 'plt': plt}
     result = None
     fig = None
@@ -45,7 +35,7 @@ def execute_code(code: str, df: pd.DataFrame):
             exec(last, {}, local_env)
             result = None
 
-        # If a figure was created
+
         if plt.get_fignums():
             fig = plt.gcf()
 
