@@ -126,10 +126,3 @@ OPENAI_API_KEY=your_openai_key_here
 - “Show the distribution of invoice amounts.”
 
 ---
-
-## ⚠️ Security Notes
-
-- OpenAI is used to generate dynamic Python code; execution is sandboxed, but you should avoid uploading sensitive data.
-- All execution is done locally in memory and is not stored.
-
----
