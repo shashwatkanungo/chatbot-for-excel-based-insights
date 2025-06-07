@@ -11,16 +11,15 @@ load_dotenv()
 st.set_page_config(page_title="Excel Insight Chatbot", layout="wide")
 st.title("Excel Insight Chatbot")
 
-# Initialize chat history
+
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
-# Clear history button
 if st.button("Clear Chat History"):
     st.session_state.chat_history = []
     st.success("Chat history cleared!")
 
-# File upload
+
 uploaded_file = st.file_uploader("Upload your Excel file (.xlsx)", type=["xlsx"])
 
 if uploaded_file:
@@ -28,7 +27,6 @@ if uploaded_file:
     st.subheader("Preview of Uploaded Data")
     st.dataframe(df.head())
 
-    # Show chat history
     if st.session_state.chat_history:
         st.subheader("Chat History")
         for i, chat in enumerate(st.session_state.chat_history):
@@ -43,7 +41,7 @@ if uploaded_file:
                 else:
                     st.success(f"{chat['result']}")
 
-    # Query input
+
     query = st.text_input("Ask a question about your data:")
 
     if query:
@@ -51,7 +49,7 @@ if uploaded_file:
             code = generate_analysis_code(df, query)
             result, fig = execute_code(code, df)
 
-            # Save to chat history
+
             st.session_state.chat_history.append({
                 "question": query,
                 "code": code,
@@ -59,9 +57,10 @@ if uploaded_file:
                 "fig": fig
             })
 
-            # Show latest result
             st.subheader("Latest Answer")
-            st.code(code, language="python")
+
+            if st.checkbox("Show Generated Code"):
+                st.code(code, language="python")
 
             if fig:
                 st.pyplot(fig)
