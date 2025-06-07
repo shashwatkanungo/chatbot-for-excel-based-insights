@@ -23,6 +23,8 @@ Check it out live here:
 - 💾 **Stores chat history** so you can review previous questions and answers.
 - ♻️ Option to clear chat history.
 - 🔒 Keeps your API key private via `.env` file.
+-   Generated code toggle : By clicking the generated code toggle the user can see the generated code, this ensures transparency and explainability.
+
 
 ---
 
