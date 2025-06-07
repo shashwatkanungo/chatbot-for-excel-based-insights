@@ -120,9 +120,9 @@ OPENAI_API_KEY=your_openai_key_here
 
 ## ✅ Example Questions You Can Ask
 
-- “What is the average order value?”
-- “Show a bar chart of sales by category.”
+- “What is the average income?”
+- “Show a bar chart of income by gender.”
 - “How many missing values are in each column?”
-- “Show the distribution of invoice amounts.”
+- “Show the distribution of income.”
 
 ---
