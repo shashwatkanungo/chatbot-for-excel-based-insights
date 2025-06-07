@@ -15,8 +15,8 @@ Check it out live here:
 
 - 📁 Upload any `.xlsx` Excel file.
 - 💬 Ask natural language questions like:
-  - "What is the average salary?"
-  - "Plot the monthly revenue trend."
+  - "What is the average income?"
+  - "Show a bar chart of income by gender."
 - 🧠 Uses OpenAI's GPT-4o to dynamically generate clean, executable `pandas` + `matplotlib` code.
 - 🧼 Handles missing values gracefully.
 - 📊 Returns charts, metrics, and data tables as appropriate.
